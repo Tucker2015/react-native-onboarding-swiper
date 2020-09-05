@@ -6,8 +6,10 @@ import {
   StatusBar,
   SafeAreaView,
   ViewPropTypes,
-  Text,
+  Text
 } from 'react-native';
+
+import {LinearGradient} from "expo-linear-gradient";
 
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -176,8 +178,18 @@ class Onboarding extends Component {
     return (
       <Animated.View
         onLayout={this._onLayout}
-        style={{ flex: 1, backgroundColor, justifyContent: 'center' }}
+        style={{ flex: 1, justifyContent: 'center' }}
       >
+        <LinearGradient
+          // Background Linear Gradient
+          colors={['#FF124F', '#FF00A0', '#FE75FE', '#7A04EB', '#120458']}
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 0,
+            height: '100%'
+          }}>
         {controlStatusBar && <StatusBar barStyle={barStyle} />}
         <FlatList
           ref={(list) => {
@@ -222,6 +234,7 @@ class Onboarding extends Component {
             />
           </SafeAreaView>
         )}
+        </LinearGradient>
       </Animated.View>
     );
   }
