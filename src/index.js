@@ -9,7 +9,7 @@ import {
   Text
 } from 'react-native';
 
-import {LinearGradient} from "expo-linear-gradient";
+import LinearGradient from "react-native-linear-gradient";
 
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -182,7 +182,7 @@ class Onboarding extends Component {
       >
         <LinearGradient
           // Background Linear Gradient
-          colors={['#FF124F', '#FF00A0', '#FE75FE', '#7A04EB', '#120458']}
+          colors={['#191919', '#333333']}
           style={{
             position: 'absolute',
             left: 0,
